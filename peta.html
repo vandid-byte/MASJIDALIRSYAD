@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masjid Al Irsyad Location</title>
+    <style>
+        /* Set the size of the map div */
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h3>Lokasi Masjid Al Irsyad</h3>
+    <div id="map"></div>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of Masjid Al Irsyad
+            const masjidAlIrsyad = { lat: -6.917464, lng: 107.619123 }; // Ganti dengan koordinat lokasi sebenarnya
+            // The map, centered at Masjid Al Irsyad
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: masjidAlIrsyad,
+            });
+            // The marker, positioned at Masjid Al Irsyad
+            const marker = new google.maps.Marker({
+                position: masjidAlIrsyad,
+                map: map,
+            });
+        }
+    </script>
+    <!-- Load the API from the specified URL -->
+    <!-- The async attribute allows the browser to render the page while the API loads -->
+    <!-- The key parameter will contain your own API key (which is not needed for this tutorial) -->
+    <!-- The callback parameter executes the initMap function -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+</body>
+</html>

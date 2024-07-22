@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visi dan Misi Masjid Al Irsyad</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font yang mirip dengan gaya Arab */
+            text-align: center;
+            background-image: url('assets/masjid.jpg'); /* Ganti dengan path gambar latar belakang Anda */
+            background-size: cover;
+            background-position: center;
+            color: white; /* Warna teks putih untuk kontras dengan latar belakang */
+            overflow: hidden; /* Menghilangkan scroll saat teks bergerak */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang semi-transparan */
+            animation: moveText 15s linear infinite; /* Animasi teks bergerak */
+        }
+        @keyframes moveText {
+            0% { transform: translateX(-100%); } /* Mulai dari luar layar kiri */
+            100% { transform: translateX(100%); } /* Berakhir di luar layar kanan */
+        }
+        .container h2 {
+            font-size: 32px; /* Ukuran font untuk judul */
+            font-weight: bold; /* Teks tebal untuk penekanan */
+            margin-bottom: 20px; /* Ruang kosong di bawah judul */
+        }
+        .container h3 {
+            font-size: 24px; /* Ukuran font untuk sub-judul */
+            font-weight: bold; /* Teks tebal untuk penekanan */
+            margin-top: 20px; /* Ruang kosong di atas sub-judul */
+        }
+        .container p, .container ol {
+            font-size: 18px; /* Ukuran font untuk teks paragraf dan daftar */
+            margin-bottom: 15px; /* Ruang kosong di bawah teks */
+            text-align: justify; /* Justifikasi teks untuk tampilan yang rapi */
+            line-height: 1.6; /* Sesuaikan jarak antar baris untuk keterbacaan yang baik */
+        }
+        .container ol {
+            list-style-type: decimal; /* Jenis penomoran daftar */
+            padding-left: 30px; /* Padding kiri untuk daftar */
+        }
+        .container ol li {
+            margin-bottom: 8px; /* Ruang kosong di antara item daftar */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Visi dan Misi Masjid Al Irsyad</h2>
+        
+        <h3>Visi :</h3>
+        <p>“Terwujudnya Masjid Al Irsyad Wadah Pemberdayaan Akhlaq Umat”</p>
+        
+        <h3>Misi :</h3>
+        <ol>
+            <li>Menjadi masjid berakhlaqul karimah sesuai tuntunan al-Quran dan hadits</li>
+            <li>Sebagai tempat untuk sarana menyaring ilmu</li>
+            <li>Berpegang teguh pada amal ma'ruf nahi munkar</li>
+            <li>Membina masyarakat dengan memberikan pemahaman tentang ilmu agama</li>
+            <li>Menjadi Masjid yang siap menyesuaikan keadaan tanpa mengurangi nilai-nilai agama</li>
+        </ol>
+    </div>
+</body>
+</html>
