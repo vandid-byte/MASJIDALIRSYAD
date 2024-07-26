@@ -1,17 +1,12 @@
 <?php
-require_once(__DIR__ . '/vendor/autoload.php');
 // Database configuration
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->safeLoad();
-
-$servername = $_ENV['DB_SERVER'];
-$username = $_ENV['DB_USERNAME'];
-$password = $_ENV['DB_PASSWORD'];
-$dbname = $_ENV['DB_DATABASE'];
-$dbport = $_ENV['DB_PORT'] ?? 3306;
+$servername = "localhost";
+$username = ""; // Ganti dengan username database Anda
+$password = ""; // Ganti dengan password database Anda
+$dbname = "masjidalirsyad2";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname, $dbport);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
