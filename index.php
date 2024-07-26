@@ -1,3 +1,12 @@
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+use Xendit\Configuration;
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->safeLoad();
+
+Configuration::setXenditKey($_ENV['XENDIT_API_KEY']);
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -20,6 +29,7 @@
         <!-- Navigasi-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
+        
         <a class="btn btn-primary" href="admin/login.php">Sign Up</a> <!-- Tombol Sign Up -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -112,14 +122,22 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="admin/create_infaq.php" action="cre" method="POST">
+                    <form id="admin/create_infaq.php" action="api/payment.php" method="POST">
                         <div class="form-group">
                             <label for="nama">Nama:</label>
                             <input type="text" name="nama" id="nama" class="form-control" required>
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="tanggal">Tanggal:</label>
                             <input type="date" name="tanggal" id="tanggal" class="form-control" required>
+                        </div> -->
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="no_hp">Nomor HP:</label>
+                            <input type="phone" name="no_hp" id="no_hp" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="jumlah">Jumlah:</label>
@@ -155,8 +173,8 @@
                                 font-weight: bold;
                                 animation: changeText 5s infinite; /* Animasi ganti teks */
                             }
-                                }
-                            }
+                            
+                        
                         </style>
                     </head>
                     <body>
